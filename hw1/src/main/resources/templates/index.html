@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Air Quality</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" th:href="@{/style.css}">
+	</head>
+
+
+	<body>
+		<div class="site-content">
+			<div class="site-header">
+				<div class="container">
+					<a href="../../" class="branding">
+						<img th:src="@{images/logo.png}" alt="" class="logo">
+						<div class="logo-type">
+							<h1 class="site-title">Air Quality</h1>
+							<small class="site-description">Homework1</small>
+						</div>
+					</a>
+				</div>
+			</div> <!-- .site-header -->
+
+			<div class="hero" th:style="'background-image:url(' + @{/images/banner.png} + '); '">
+				<div class="container">
+					<form class="find-location">
+						<input id="myloc" type="text" placeholder="Search location...">
+						<button type="button" onclick="location.replace('/search/'+document.getElementById('myloc').value)" value="Find">Go</button>
+					</form>
+
+				</div>
+			</div>
+			<div class="forecast-table">
+				<div class="container">
+					<div class="forecast-container">
+						<div class="today forecast">
+							<div class="forecast-header">
+								<div class="day" th:text="${week}"></div>
+								<div class="date" th:text="${date}"></div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="location" th:text="${cityName}"></div>
+								<div class="degree">
+									<div class="num" th:text="'AQI: '+${aqi}"></div>
+									<div class="forecast-icon">
+										<img th:src="@{images/icons/icon-1.svg}" alt="" width=90>
+									</div>
+								</div>
+								<span th:text="'Latitude, Longitude: '+${lat}+', '+${lon}"></span>
+							</div>
+						</div>
+
+						<div class="forecast" th:each="day: ${forecast}">
+							<div class="forecast-header">
+								<div class="day" th:text="${day.value[4]}"></div>
+								<!--<div class="day" th:text="${day.value[5]}"></div>-->
+							</div> <!-- .forecast-header -->
+							<div style="font-size: 20px" class="forecast-content">
+								<span th:text="'pm10: ' + ${day.value[0]}"></span>
+								<br>
+								<span th:text="'o3: ' + ${day.value[1]}"></span>
+								<br>
+								<span th:text="'pm25: '+ ${day.value[2]}"></span>
+								<br>
+								<span th:text="'uvi: ' + ${day.value[3]}"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="navbar  site-footer">
+			<div class="container">
+				<p class="colophon">Copyright 2021 TQS. Pedro Souto 93106. All rights reserved</p>
+			</div>
+		</footer> <!-- .site-footer -->
+
+	</body>
+
+</html>
+<!-- 944dee06c3183ed59d45d84acd7532a04c41ec53 -->
