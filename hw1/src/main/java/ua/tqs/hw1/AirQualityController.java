@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 public class AirQualityController {
     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
     SimpleDateFormat sdf2 = new SimpleDateFormat("EE");
-    static AirQualityCache<String, AirQuality> cache = new AirQualityCache<String, AirQuality>(200,500);
+    static AirQualityCache<String, AirQuality> cache = new AirQualityCache<>(200,500);
     public final static Logger logger = LogManager.getLogger();
 
 
@@ -36,10 +36,10 @@ public class AirQualityController {
         ModelAndView mv = new ModelAndView("index");
         AirQuality aq;
 
-        if(cache.get(city.toString().toLowerCase())!=null){
+        if(cache.get(city.toLowerCase())!=null){
             logger.info("AirQuality for city="+city+ " in cache");
             logger.info("Getting AirQuality data for city="+city+" from the cache");
-            aq = cache.get(city.toString().toLowerCase());
+            aq = cache.get(city.toLowerCase());
             logger.info(aq.toString());
         }
         else{
@@ -52,7 +52,7 @@ public class AirQualityController {
             aq = aqs.getAq();
             logger.info(aq.toString());
             logger.info("Saving AirQuality data for city="+city+" in cache");
-            cache.put(city.toString().toLowerCase(),aq);
+            cache.put(city.toLowerCase(),aq);
         }
 
         HashMap<Integer, String[]> forecast = new HashMap<>();

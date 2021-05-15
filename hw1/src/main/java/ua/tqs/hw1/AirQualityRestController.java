@@ -24,8 +24,8 @@ public class AirQualityRestController {
     public ResponseEntity<Object> getCityInfo(@PathVariable("city") String city) {
         AirQuality aq;
 
-        if(AirQualityController.cache.get(city.toString().toLowerCase())!=null){
-            aq = AirQualityController.cache.get(city.toString().toLowerCase());
+        if(AirQualityController.cache.get(city.toLowerCase())!=null){
+            aq = AirQualityController.cache.get(city.toLowerCase());
         }
         else{
             if(!aqs.getCityData(city)){
@@ -34,7 +34,7 @@ public class AirQualityRestController {
                 return new ResponseEntity<>(bad, HttpStatus.NOT_FOUND);
             }
             aq = aqs.getAq();
-            AirQualityController.cache.put(city.toString().toLowerCase(),aq);
+            AirQualityController.cache.put(city.toLowerCase(),aq);
         }
 
         results = new HashMap<>();

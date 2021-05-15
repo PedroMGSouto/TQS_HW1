@@ -2,7 +2,6 @@ package ua.tqs.hw1;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -12,7 +11,7 @@ import java.util.Map;
 public class AirQualityService {
     AirQuality aq;
 
-    private RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate = new RestTemplate();
 
     public boolean getCityData(String cityChoice){
 
@@ -45,7 +44,7 @@ public class AirQualityService {
         }
         catch (Exception e){
             System.out.println("https://api.waqi.info/feed/"+cityChoice+"/?token=944dee06c3183ed59d45d84acd7532a04c41ec53");
-            System.out.println(e.toString());
+            System.out.println(e);
             return false;
         }
     }

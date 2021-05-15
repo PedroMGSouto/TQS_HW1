@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 
 import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matchers.hasKey;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class AirQualityRestControllerItTest {
@@ -38,9 +39,9 @@ public class AirQualityRestControllerItTest {
         RestAssured.given().port(port).get("/api/stats")
                 .then()
                 .statusCode(200)
-                .and().body("Misses", equalTo(0))
-                .and().body("Hits", equalTo(0))
-                .and().body("Requests", equalTo(0));
+                .and().body("$", hasKey("Misses"))
+                .and().body("$", hasKey("Hits"))
+                .and().body("$", hasKey("Requests"));
     }
 
 }
