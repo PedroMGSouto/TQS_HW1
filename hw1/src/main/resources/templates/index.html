@@ -63,7 +63,7 @@
 						<div class="forecast" th:each="day: ${forecast}">
 							<div class="forecast-header">
 								<div class="day" th:text="${day.value[4]}"></div>
-								<!--<div class="day" th:text="${day.value[5]}"></div>-->
+								<div class="day" th:text="${day.value[5]}"></div>
 							</div> <!-- .forecast-header -->
 							<div style="font-size: 20px" class="forecast-content">
 								<span th:text="'pm10: ' + ${day.value[0]}"></span>

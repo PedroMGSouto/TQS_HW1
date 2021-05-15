@@ -15,7 +15,7 @@ public class AirQualityRestControllerItTest {
     @LocalServerPort
     int port;
 
-    @DisplayName("City exists then return aq forecast")
+    @DisplayName("City exists")
     @Test
     void whenCityExists(){
         RestAssured.given().port(port).get("/api/search/oPorto")

@@ -14,7 +14,6 @@ import java.util.logging.Logger;
 @Controller
 public class AirQualityController {
     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-    SimpleDateFormat sdf2 = new SimpleDateFormat("EE");
     static AirQualityCache<String, AirQuality> cache = new AirQualityCache<>(200,500);
     public final static Logger logger = LogManager.getLogger();
 
@@ -82,7 +81,7 @@ public class AirQualityController {
 
 
             a[4] = dt;
-            //a[5] = getWeekDay(c);
+            a[5] = getWeekDay(c);
             forecast.put(i,a);
         }
 
@@ -94,7 +93,7 @@ public class AirQualityController {
 
 
     private ModelAndView setNA(ModelAndView mv){
-        mv.addObject("aqi", "1 Search a City");
+        mv.addObject("aqi", "Search a City");
         return mv;
     }
 
@@ -103,7 +102,25 @@ public class AirQualityController {
     }
 
     private String getWeekDay(Calendar c){
-        return sdf2.format(c.get(Calendar.DAY_OF_WEEK));
+        int day = c.get(Calendar.DAY_OF_WEEK);
+        switch(day){
+            case(1):
+                return "Domingo";
+            case(2):
+                return "Segunda-feira";
+            case(3):
+                return "Terça-feira";
+            case(4):
+                return "Quarta-feira";
+            case(5):
+                return "Quinta-feira";
+            case(6):
+                return "Sexta-feira";
+            case(7):
+                return "Sábado";
+            default:
+                return "";
+        }
     }
 
 }

@@ -31,7 +31,7 @@ public class Sel_CityNotExists {
     driver.findElement(By.id("myloc")).click();
     driver.findElement(By.id("myloc")).sendKeys("asd");
     driver.findElement(By.cssSelector("button")).click();
-    assertThat(driver.findElement(By.cssSelector(".num")).getText(), is("AQI: 1 Search a City"));
+    assertThat(driver.findElement(By.cssSelector(".num")).getText(), is("AQI: Search a City"));
     assertThat(driver.findElement(By.cssSelector("span")).getText(), is("Latitude, Longitude: null, null"));
   }
 }
