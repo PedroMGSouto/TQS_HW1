@@ -1,0 +1,48 @@
+mai 15, 2021 6:52:29 DA TARDE ua.tqs.hw1.AirQualityController home
+INFO: Get Mapping /
+mai 15, 2021 6:52:50 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Get Mapping /search/{city} with city=oPorto
+mai 15, 2021 6:52:50 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: AirQuality for city=oPortonot in cache
+mai 15, 2021 6:52:51 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Getting AirQuality data for city=oPorto from the API (Service)
+mai 15, 2021 6:52:51 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: AirQuality{cityName='oPorto', date='2021-05-15 16:00:00', aqi='20', LatLon=[41.1475, -8.658889], o3=[{"avg":26,"min":21,"day":"2021-05-15","max":31},{"avg":27,"min":17,"day":"2021-05-16","max":41},{"avg":31,"min":23,"day":"2021-05-17","max":40},{"avg":23,"min":16,"day":"2021-05-18","max":31},{"avg":20,"min":16,"day":"2021-05-19","max":20}], pm10=[{"avg":10,"min":7,"day":"2021-05-15","max":12},{"avg":10,"min":7,"day":"2021-05-16","max":14},{"avg":15,"min":9,"day":"2021-05-17","max":22},{"avg":18,"min":10,"day":"2021-05-18","max":25},{"avg":17,"min":17,"day":"2021-05-19","max":21}], pm25=[{"avg":26,"min":19,"day":"2021-05-15","max":34},{"avg":24,"min":17,"day":"2021-05-16","max":32},{"avg":40,"min":20,"day":"2021-05-17","max":59},{"avg":50,"min":31,"day":"2021-05-18","max":65},{"avg":52,"min":52,"day":"2021-05-19","max":60}], uvi=[{"avg":0,"min":0,"day":"2021-05-15","max":3},{"avg":1,"min":0,"day":"2021-05-16","max":7},{"avg":1,"min":0,"day":"2021-05-17","max":9},{"avg":1,"min":0,"day":"2021-05-18","max":6},{"avg":1,"min":0,"day":"2021-05-19","max":9},{"avg":0,"min":0,"day":"2021-05-20","max":0}]}
+mai 15, 2021 6:52:51 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Saving AirQuality data for city=oPorto in cache
+mai 15, 2021 6:52:51 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Getting min between forecasts, min=5
+mai 15, 2021 6:52:51 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Adding attributes to the ModelAndView
+mai 15, 2021 6:52:54 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Get Mapping /search/{city} with city=Lisbon
+mai 15, 2021 6:52:54 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: AirQuality for city=Lisbonnot in cache
+mai 15, 2021 6:52:55 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Getting AirQuality data for city=Lisbon from the API (Service)
+mai 15, 2021 6:52:55 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: AirQuality{cityName='Lisbon', date='2021-05-15 16:00:00', aqi='1', LatLon=[38.74861, -9.148889], o3=[{"avg":25,"min":21,"day":"2021-05-15","max":32},{"avg":21,"min":12,"day":"2021-05-16","max":29},{"avg":34,"min":31,"day":"2021-05-17","max":41},{"avg":28,"min":25,"day":"2021-05-18","max":34},{"avg":23,"min":23,"day":"2021-05-19","max":24}], pm10=[{"avg":11,"min":6,"day":"2021-05-15","max":16},{"avg":9,"min":6,"day":"2021-05-16","max":11},{"avg":11,"min":8,"day":"2021-05-17","max":12},{"avg":11,"min":7,"day":"2021-05-18","max":13},{"avg":10,"min":10,"day":"2021-05-19","max":10}], pm25=[{"avg":34,"min":20,"day":"2021-05-15","max":50},{"avg":28,"min":19,"day":"2021-05-16","max":39},{"avg":31,"min":20,"day":"2021-05-17","max":40},{"avg":33,"min":20,"day":"2021-05-18","max":48},{"avg":35,"min":33,"day":"2021-05-19","max":35}], uvi=[{"avg":1,"min":0,"day":"2021-05-15","max":8},{"avg":1,"min":0,"day":"2021-05-16","max":6},{"avg":1,"min":0,"day":"2021-05-17","max":9},{"avg":1,"min":0,"day":"2021-05-18","max":9},{"avg":1,"min":0,"day":"2021-05-19","max":9},{"avg":0,"min":0,"day":"2021-05-20","max":0}]}
+mai 15, 2021 6:52:55 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Saving AirQuality data for city=Lisbon in cache
+mai 15, 2021 6:52:55 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Getting min between forecasts, min=5
+mai 15, 2021 6:52:55 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Adding attributes to the ModelAndView
+mai 15, 2021 6:52:58 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Get Mapping /search/{city} with city=oPorto
+mai 15, 2021 6:52:58 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: AirQuality for city=oPorto in cache
+mai 15, 2021 6:52:58 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Getting AirQuality data for city=oPorto from the cache
+mai 15, 2021 6:52:58 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: AirQuality{cityName='oPorto', date='2021-05-15 16:00:00', aqi='20', LatLon=[41.1475, -8.658889], o3=[{"avg":26,"min":21,"day":"2021-05-15","max":31},{"avg":27,"min":17,"day":"2021-05-16","max":41},{"avg":31,"min":23,"day":"2021-05-17","max":40},{"avg":23,"min":16,"day":"2021-05-18","max":31},{"avg":20,"min":16,"day":"2021-05-19","max":20}], pm10=[{"avg":10,"min":7,"day":"2021-05-15","max":12},{"avg":10,"min":7,"day":"2021-05-16","max":14},{"avg":15,"min":9,"day":"2021-05-17","max":22},{"avg":18,"min":10,"day":"2021-05-18","max":25},{"avg":17,"min":17,"day":"2021-05-19","max":21}], pm25=[{"avg":26,"min":19,"day":"2021-05-15","max":34},{"avg":24,"min":17,"day":"2021-05-16","max":32},{"avg":40,"min":20,"day":"2021-05-17","max":59},{"avg":50,"min":31,"day":"2021-05-18","max":65},{"avg":52,"min":52,"day":"2021-05-19","max":60}], uvi=[{"avg":0,"min":0,"day":"2021-05-15","max":3},{"avg":1,"min":0,"day":"2021-05-16","max":7},{"avg":1,"min":0,"day":"2021-05-17","max":9},{"avg":1,"min":0,"day":"2021-05-18","max":6},{"avg":1,"min":0,"day":"2021-05-19","max":9},{"avg":0,"min":0,"day":"2021-05-20","max":0}]}
+mai 15, 2021 6:52:58 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Getting min between forecasts, min=5
+mai 15, 2021 6:52:58 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Adding attributes to the ModelAndView
+mai 15, 2021 6:53:14 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: Get Mapping /search/{city} with city=asd
+mai 15, 2021 6:53:14 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: AirQuality for city=asdnot in cache
+mai 15, 2021 6:53:15 DA TARDE ua.tqs.hw1.AirQualityController getCityInfo
+INFO: City=asd does not exist or something went wrong
